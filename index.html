@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Zapp</h1>
+        <div class="header-right">
+            <input type="text" id="search-bar" placeholder="Buscar...">
+        </div>
+    </header>
+
+    <main>
+        <section class="menu" id="menu">
+            <!-- PIZZA -->
+            <div class="item" data-type="pizza">
+                <img src="Pizza.jpg" alt="Pizza" id="pizza">
+                <h3>Pizza</h3>
+                <p>S/.10.00</p>
+                <button onclick="addToCart('Pizza', 10)">Añadir al Carrito</button>
+            </div>
+            <!-- Hamburguesa -->
+            <div class="item" data-type="hamburguesa">
+                <img src="Hamburguesa.jpg" alt="Hamburguesa" id="Hamburguesa">
+                <h3>Hamburguesa</h3>
+                <p>S/.8.00</p>
+                <button onclick="addToCart('Hamburguesa', 8)">Añadir al Carrito</button>
+            </div>
+            <!-- Ensalada -->
+            <div class="item" data-type="ensalada">
+                <img src="ensalada.jpg" alt="Ensalada" id="ensalada">
+                <h3>Ensalada</h3>
+                <p>S/.5.00</p>
+                <button onclick="addToCart('Ensalada', 5)">Añadir al Carrito</button>
+            </div>
+            <!-- Tacos -->
+            <div class="item" data-type="tacos">
+                <img src="tacos.jpg" alt="Tacos" id="tacos">
+                <h3>Tacos</h3>
+                <p>S/.12.00</p>
+                <button onclick="addToCart('Tacos', 12)">Añadir al Carrito</button>
+            </div>
+            <!-- Sushi -->
+            <div class="item" data-type="sushi">
+                <img src="sushi.jpg" alt="Sushi" id="sushi">
+                <h3>Sushi</h3>
+                <p>S/.15.00</p>
+                <button onclick="addToCart('Sushi', 15)">Añadir al Carrito</button>
+            </div>
+            <!-- Pasta -->
+            <div class="item" data-type="pasta">
+                <img src="tallaries.jpg" alt="Pasta" id="pasta">
+                <h3>Pasta</h3>
+                <p>S/.11.00</p>
+                <button onclick="addToCart('Pasta', 11)">Añadir al Carrito</button>
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Carrito</h2>
+            <ul id="cart-items">
+                <!-- Items del carrito aparecerán aquí -->
+            </ul>
+            <p>Total: S/.<span id="total">0</span></p>
+            <button onclick="checkout()">Pagar</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Zapp. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
